@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  background-image: url('../public/fondocol.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
