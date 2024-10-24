@@ -11,11 +11,20 @@ export const SegundoChallenge = ({valorLlegada = 0}) => {
     setValor(valor + 1);
   }
 
+  const disminuirValor = () => {
+    setValor(valor - 1);
+  }
+
+  const resetearValor = () => {
+    setValor(0);
+  }
   return (
     <>
       <h1>Counter: {valor}</h1>
       {/* No invoques la función directamente, solo pasa la referencia */}
-      <button onClick={incrementarValor}>Incrementar</button>
+      <button onClick={incrementarValor}>Incrementar +1</button>
+      <button onClick={disminuirValor}>Incrementar -1</button>
+      <button onClick={resetearValor}>Reset</button>
     </>
   )
 }
