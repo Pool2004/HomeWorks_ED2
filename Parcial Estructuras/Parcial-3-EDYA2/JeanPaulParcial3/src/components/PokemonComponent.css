@@ -1,0 +1,75 @@
+/* Contenedor general del componente */
+.pokemon-container {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombras suaves */
+  color: #fff;
+  text-align: center;
+}
+
+/* Título */
+.pokemon-container h2 {
+  font-size: 1.8rem;
+  color: #ff79c6;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #ff79c6, 0 0 20px #ff79c6; /* Efecto de neón */
+}
+
+/* Input de búsqueda */
+.pokemon-container input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto hover/focus en input */
+.pokemon-container input:focus {
+  box-shadow: 0 0 10px #ff79c6, 0 0 20px #ff79c6;
+  border-color: #ff79c6;
+}
+
+/* Botón de búsqueda */
+.pokemon-container button {
+  background-color: #ff79c6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover en botón */
+.pokemon-container button:hover {
+  background-color: #ff92d6;
+  transform: scale(1.05); /* Efecto de crecimiento */
+}
+
+/* Estado de carga */
+.pokemon-container p {
+  font-size: 1rem;
+  color: #f1f1f1;
+}
+
+/* Detalles del Pokémon */
+.pokemon-container h3 {
+  font-size: 1.5rem;
+  color: #8be9fd;
+  margin: 15px 0;
+}
+
+.pokemon-container img {
+  margin-top: 10px;
+  max-width: 150px;
+  border-radius: 8px;
+  border: 2px solid #ff79c6;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
