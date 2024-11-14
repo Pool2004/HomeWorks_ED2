@@ -4,28 +4,21 @@ import { fetchPokemon } from '../features/pokemon/pokemonSlice';
 import './PokemonComponent.css';
 
 const PokemonComponent = () => {
-  const [pokemonName, setPokemonName] = useState('');
+  const [pokemonId, setPokemonId] = useState(1); // Comienza con el ID 1
   const dispatch = useDispatch();
   const pokemon = useSelector((state) => state.pokemon.data);
   const status = useSelector((state) => state.pokemon.status);
   const error = useSelector((state) => state.pokemon.error);
 
-  const handleSearch = () => {
-    if (pokemonName.trim() !== '') {
-      dispatch(fetchPokemon(pokemonName.toLowerCase()));
-    }
+  const handleNextPokemon = () => {
+    dispatch(fetchPokemon(pokemonId)); // Busca el Pokémon por ID
+    setPokemonId((prevId) => prevId + 1); // Incrementa el ID para el próximo clic
   };
 
   return (
     <div className="pokemon-container">
-      <h2>Find a Pokemon!</h2>
-      <input
-        type="text"
-        value={pokemonName}
-        onChange={(e) => setPokemonName(e.target.value)}
-        placeholder="Ingresa el nombre"
-      />
-      <button onClick={handleSearch}>Buscar</button>
+      <h2>Find a Pokemon by ID!</h2>
+      <button onClick={handleNextPokemon}>Next Pokémon</button>
 
       {status === 'loading' && <p>Loading...</p>}
       {error && <p style={{ color: 'red' }}>Error: {error}</p>}
@@ -38,4 +31,5 @@ const PokemonComponent = () => {
     </div>
   );
 };
+
 export default PokemonComponent;
