@@ -1,0 +1,125 @@
+/* Variables CSS para colores y estilos comunes */
+:root {
+  --primary-color: #1074ab;
+  --secondary-color: #03495c;
+  --hover-color: #ddd;
+  --text-light: #f2f2f2;
+  --text-dark: #000000;
+  --dropdown-bg: hsl(204, 100%, 80%);
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la barra de navegación */
+.nav-bar {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Estilos para el logo */
+.nav-logo {
+  color: var(--text-light);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo .textLogo {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+/* Contenedor de enlaces de navegación */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-link {
+  color: var(--text-light);
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: var(--hover-color);
+  color: var(--text-dark);
+}
+
+.nav-link2 {
+  color: var(--text-dark);
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-link2:hover {
+  background-color: #a5a5a5;
+  color: rgb(82, 80, 80);
+}
+
+/* Estilos para el enlace activo */
+.active-link {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--dropdown-bg);
+  min-width: 150px;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--hover-color);
+  color: var(--text-dark);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}

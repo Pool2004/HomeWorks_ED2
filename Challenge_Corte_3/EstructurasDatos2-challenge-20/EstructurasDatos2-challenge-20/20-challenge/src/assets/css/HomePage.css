@@ -1,0 +1,48 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scroll */
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #eaf0f6; /* Fondo más moderno */
+}
+
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Flex para centrar verticalmente */
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dcefff, #f0f4f8); /* Gradiente moderno */
+  padding: 20px;
+  text-align: center;
+}
+
+.home-container h1 {
+  background-color: #ffffff;
+  padding: 30px 40px; /* Más espaciamiento */
+  border-radius: 12px; /* Bordes más redondeados */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  color: #0a6cff; /* Color más vibrante */
+  font-size: 2rem; /* Aumentar la fuente */
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.home-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #0a6cff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-container button:hover {
+  background-color: #0848b6; /* Color al pasar el mouse */
+  transform: scale(1.05); /* Efecto de agrandado */
+}

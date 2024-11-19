@@ -1,0 +1,110 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scroll */
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(135deg, #dcefff, #f0f4f8); /* Gradiente moderno */
+  color: #333; /* Color general del texto */
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px; /* Bordes más suaves */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos dentro del formulario */
+}
+
+.login-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Bordes más redondeados */
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: #1074ab;
+  box-shadow: 0 0 5px rgba(16, 116, 171, 0.5);
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #1074ab;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.login-button:hover {
+  background-color: #0a5e85;
+  transform: scale(1.05); /* Efecto de agrandado */
+}
+
+.google-login-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ffffff;
+  color: #1074ab;
+  border: 2px solid #1074ab;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.google-login-button:hover {
+  background-color: #1074ab;
+  color: #ffffff;
+  transform: scale(1.05); /* Efecto de agrandado */
+}
+
+.error-message {
+  color: #ff4d4d; /* Color de error más llamativo */
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.toggle-register-login {
+  display: inline-block;
+  margin-top: 15px;
+  text-align: center;
+  background: #1074ab;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+}
+
+.toggle-register-login:hover {
+  background-color: #0a5e85;
+  transform: scale(1.05); /* Efecto de agrandado */
+}
