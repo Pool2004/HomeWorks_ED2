@@ -8,24 +8,14 @@ const initialState = {
   lastPage: localStorage.getItem("lastPage") || "/",
 };
 
-const authReducer = (state, action) => {
-  switch (action.type) {
+const authReducer = (state, { type, payload }) => {
+  switch (type) {
     case "LOGIN":
-      return {
-        ...state,
-        isAuthenticated: true,
-        username: action.payload.username,
-        lastPage: state.lastPage, 
-      };
+      return { ...state, isAuthenticated: true, username: payload?.username };
     case "LOGOUT":
-      return {
-        ...state,
-        isAuthenticated: false,
-        username: null,
-        lastPage: "/",
-      };
+      return { ...initialState, lastPage: "/" };
     case "SET_LAST_PAGE":
-      return { ...state, lastPage: action.payload };
+      return { ...state, lastPage: payload };
     default:
       return state;
   }
@@ -38,13 +28,9 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem("lastPage", state.lastPage);
   }, [state.lastPage]);
 
-  return (
-    <AuthContext.Provider value={{ state, dispatch }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  const value = { state, dispatch };
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
-export const useAuth = () => {
-  return useContext(AuthContext);
-};
+export const useAuth = () => useContext(AuthContext);

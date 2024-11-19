@@ -16,27 +16,27 @@ const NavComponent = () => {
         <>
           <nav className="nav-bar">
             <Link to="/" className="nav-logo">
-              <img src={logo} alt="logo" className="logo" />
-              <p className="textLogo">React JS</p>
+              
+              <p className="textLogo">Rutas</p>
             </Link>
             <div className="nav-links">
               <Link
                 to="/"
                 className="nav-link"
               >
-                Home
+                Principal
               </Link>
               <Link
                 to="/about"
                 className="nav-link"
               >
-                About
+                Acerca
               </Link>
               <Link
                 to="/login"
                 className="nav-link"
               >
-                Login
+                Inicio Sesión
               </Link>
             </div>
           </nav>
@@ -45,15 +45,15 @@ const NavComponent = () => {
         <>
           <nav className="nav-bar">
             <Link to="/" className="nav-logo">
-              <img src={logo} alt="logo" className="logo" />
-              <p className="textLogo">React JS</p>
+              
+              <p className="textLogo">Rutas</p>
             </Link>
             <div className="nav-links">
               <Link
                 to="/"
                 className="nav-link"
               >
-                Home
+                Principal
               </Link>
               <Link
                 to="/dashboard"
@@ -65,7 +65,7 @@ const NavComponent = () => {
                 to="/about"
                 className="nav-link"
               >
-                About
+                Acerca 
               </Link>
               {state.isAuthenticated && (
                 <>
@@ -73,7 +73,7 @@ const NavComponent = () => {
                     onClick={handleLogout}
                     className="nav-link2 logout-button"
                   >
-                    Logout
+                    Cerrar Sesión
                   </button>
                 </>
               )}
