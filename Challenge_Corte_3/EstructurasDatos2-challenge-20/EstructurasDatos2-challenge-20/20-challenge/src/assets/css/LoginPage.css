@@ -5,8 +5,8 @@ html {
   height: 100%;
   overflow: hidden; /* Prevent scroll */
   font-family: 'Inter', Arial, sans-serif;
-  background: linear-gradient(135deg, #dcefff, #f0f4f8); /* Gradiente moderno */
-  color: #333; /* Color general del texto */
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Gradiente oscuro */
+  color: #eaeaea; /* Color general del texto */
 }
 
 .login-container {
@@ -18,10 +18,10 @@ html {
 }
 
 .login-form {
-  background-color: #ffffff;
+  background-color: #2a2a2a; /* Fondo oscuro para el formulario */
   padding: 30px;
   border-radius: 12px; /* Bordes más suaves */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada */
   width: 100%;
   max-width: 400px;
   display: flex;
@@ -33,22 +33,24 @@ html {
   width: 100%;
   padding: 15px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #444;
+  background-color: #1e1e1e; /* Fondo oscuro */
   border-radius: 6px; /* Bordes más redondeados */
   font-size: 1rem;
+  color: #eaeaea; /* Texto claro */
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .login-input:focus {
-  border-color: #1074ab;
-  box-shadow: 0 0 5px rgba(16, 116, 171, 0.5);
+  border-color: #ff4d4d; /* Rojo brillante para el borde */
+  box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
   outline: none;
 }
 
 .login-button {
   width: 100%;
   padding: 15px;
-  background-color: #1074ab;
+  background-color: #ff4d4d; /* Rojo vibrante */
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -59,16 +61,16 @@ html {
 }
 
 .login-button:hover {
-  background-color: #0a5e85;
+  background-color: #cc3a3a; /* Rojo más oscuro al hacer hover */
   transform: scale(1.05); /* Efecto de agrandado */
 }
 
 .google-login-button {
   width: 100%;
   padding: 15px;
-  background-color: #ffffff;
-  color: #1074ab;
-  border: 2px solid #1074ab;
+  background-color: #1e1e1e; /* Fondo oscuro */
+  color: #ff4d4d; /* Rojo brillante */
+  border: 2px solid #ff4d4d; /* Bordes rojos */
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
@@ -77,8 +79,8 @@ html {
 }
 
 .google-login-button:hover {
-  background-color: #1074ab;
-  color: #ffffff;
+  background-color: #ff4d4d; /* Fondo rojo al hacer hover */
+  color: #ffffff; /* Texto blanco */
   transform: scale(1.05); /* Efecto de agrandado */
 }
 
@@ -93,7 +95,7 @@ html {
   display: inline-block;
   margin-top: 15px;
   text-align: center;
-  background: #1074ab;
+  background: #ff4d4d; /* Fondo rojo */
   color: #ffffff;
   padding: 12px 20px;
   border-radius: 6px;
@@ -105,6 +107,6 @@ html {
 }
 
 .toggle-register-login:hover {
-  background-color: #0a5e85;
+  background-color: #cc3a3a; /* Rojo más oscuro al hacer hover */
   transform: scale(1.05); /* Efecto de agrandado */
 }

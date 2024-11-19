@@ -3,53 +3,56 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useAuth } from '../context/AuthContext';
 import { registerUser, loginWithGoogle, loginUser } from '../utils/authSlice';
-import '../assets/css/LoginPage.css'; // Import CSS
+import '../assets/css/LoginPage.css';
 
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user } = useAuth();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('');
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    username: '',
+  });
   const [error, setError] = useState('');
   const [isRegistering, setIsRegistering] = useState(false);
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const result = await dispatch(loginUser({ email, password })).unwrap();
-      if (result) {
-        console.log("Login exitoso", result);
-        navigate('/dashboard');
-      }
-    } catch (error) {
-      setError(error.message);
-    }
+  // Manejo genérico de cambios en los campos
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleRegister = async (e) => {
+  // Función genérica para login y registro
+  const handleAuth = async (e) => {
     e.preventDefault();
+    const { email, password, username } = formData;
+    const action = isRegistering
+      ? registerUser({ email, password, username })
+      : loginUser({ email, password });
+
     try {
-      const result = await dispatch(registerUser({ email, password, username })).unwrap();
+      const result = await dispatch(action).unwrap();
       if (result) {
-        console.log("Registro exitoso", result);
-        navigate("/dashboard", { replace: true });
+        console.log(`${isRegistering ? 'Registro' : 'Login'} exitoso`, result);
+        navigate('/dashboard', { replace: true });
       }
     } catch (err) {
-      console.error("Error en registro:", err);
+      setError(err.message);
+      console.error(`Error en ${isRegistering ? 'registro' : 'login'}:`, err);
     }
   };
 
+  // Login con Google
   const handleGoogleLogin = async () => {
     try {
       const result = await dispatch(loginWithGoogle()).unwrap();
       if (result) {
         console.log("Google login exitoso", result);
-        navigate("/dashboard", { replace: true });
+        navigate('/dashboard', { replace: true });
       }
     } catch (err) {
-      setError(err.message); // Set error message
+      setError(err.message);
       console.error("Error en Google login:", err);
     }
   };
@@ -57,13 +60,14 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-form">
-        <form onSubmit={isRegistering ? handleRegister : handleLogin}>
+        <form onSubmit={handleAuth}>
           {isRegistering && (
             <div>
               <input
                 type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
                 placeholder="Username"
                 required
                 className="login-input"
@@ -73,8 +77,9 @@ const Login = () => {
           <div>
             <input
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Email"
               required
               className="login-input"
@@ -83,8 +88,9 @@ const Login = () => {
           <div>
             <input
               type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
               placeholder="Password"
               required
               className="login-input"
@@ -92,33 +98,29 @@ const Login = () => {
           </div>
 
           <div>
-            <button
-              type="submit"
-              className="login-button"
-            >
-              {isRegistering ? "Register" : "Login"}
+            <button type="submit" className="login-button">
+              {isRegistering ? 'Registrarse' : 'Inicio Sesión'}
             </button>
           </div>
         </form>
 
-        <button
-          onClick={handleGoogleLogin}
-          className="google-login-button"
-        >
-          Login with Google
+        <button onClick={handleGoogleLogin} className="google-login-button">
+          Ingrese con la cuenta de google 
         </button>
 
         {error && <p className="error-message">{error}</p>}
 
         <button
-          onClick={() => setIsRegistering(!isRegistering)}
+          onClick={() => setIsRegistering((prev) => !prev)}
           className="toggle-register-login"
         >
-          {isRegistering ? "Already have an account? Login" : "Don't have an account? Register"}
+          {isRegistering
+            ? 'Ya tenes una cuenta ve? Ingresar'
+            : "No tenes una cuenta???? Registrese ;)"}
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default Login;

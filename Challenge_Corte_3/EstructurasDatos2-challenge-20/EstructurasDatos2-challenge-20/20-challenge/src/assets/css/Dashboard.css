@@ -1,6 +1,6 @@
 .dashboard-container {
   min-height: 100vh;
-  background-color: #eaf2fa;
+  background-color: #121212; /* Fondo oscuro */
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -8,10 +8,10 @@
 }
 
 .dashboard-header {
-  background-color: #ffffff;
+  background-color: #1e1e1e; /* Fondo oscuro para el encabezado */
   padding: 20px 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra más oscura */
   margin-bottom: 30px;
   text-align: center;
   width: 100%;
@@ -21,14 +21,14 @@
 .dashboard-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #0d6efd;
+  color: #00adb5; /* Azul cian para destacar */
 }
 
 .dashboard-content {
-  background-color: #ffffff;
+  background-color: #1e1e1e; /* Fondo oscuro para contenido */
   padding: 25px 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra oscura */
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -39,13 +39,13 @@
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
-  border-bottom: 1px solid #d1e0f0;
+  border-bottom: 1px solid #2a2a2a; /* Línea tenue */
   align-items: center;
   transition: background-color 0.3s ease;
 }
 
 .dashboard-item:hover {
-  background-color: #f7faff;
+  background-color: #333333; /* Fondo más claro al pasar el ratón */
 }
 
 .dashboard-item:last-child {
@@ -54,17 +54,17 @@
 
 .dashboard-item-title {
   font-weight: bold;
-  color: #0d6efd;
+  color: #00adb5; /* Azul cian para títulos */
   font-size: 1.1rem;
 }
 
 .dashboard-item-value {
-  color: #495057;
+  color: #cccccc; /* Texto gris claro */
   font-size: 1rem;
 }
 
 .dashboard-button {
-  background-color: #0d6efd;
+  background-color: #00adb5; /* Azul cian */
   color: white;
   padding: 10px 20px;
   font-size: 1rem;
@@ -76,6 +76,6 @@
 }
 
 .dashboard-button:hover {
-  background-color: #0056b3;
+  background-color: #007f8a; /* Azul más oscuro */
   transform: scale(1.05);
 }

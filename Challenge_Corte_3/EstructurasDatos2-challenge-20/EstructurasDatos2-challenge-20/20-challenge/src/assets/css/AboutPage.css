@@ -5,7 +5,8 @@ html {
   height: 100%;
   overflow: hidden;
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background-color: #eaf2fa;
+  background-color: #121212; /* Fondo oscuro */
+  color: #eaeaea; /* Texto claro */
 }
 
 .about-container {
@@ -14,30 +15,31 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #eef7ff;
-  color: #1a202c;
+  background-color: #1a1a1a; /* Fondo ligeramente más claro */
+  color: #eaeaea; /* Texto claro */
 }
 
 .about-container h1 {
-  background-color: #ffffff;
+  background-color: #222831; /* Fondo oscuro para el título */
   padding: 20px 30px;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  color: #0d6efd;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra más oscura */
+  color: #00adb5; /* Azul cian para el texto */
   font-size: 2.5rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .about-container h1:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada */
+  background-color: #393e46; /* Fondo más claro al pasar el ratón */
 }
 
 .about-container p {
   margin-top: 20px;
   font-size: 1.2rem;
-  color: #4a5568;
+  color: #cccccc; /* Texto gris claro */
   text-align: center;
   max-width: 600px;
   line-height: 1.6;

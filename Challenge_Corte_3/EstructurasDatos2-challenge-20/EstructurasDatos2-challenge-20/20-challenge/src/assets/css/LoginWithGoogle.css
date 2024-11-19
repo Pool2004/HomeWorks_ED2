@@ -2,19 +2,19 @@
   width: 100%;
   padding: 12px 16px; /* Aumenté el padding para mayor comodidad */
   background-color: #ffffff;
-  color: #1074ab;
-  border: 2px solid #1074ab; /* Bordes más gruesos para un diseño más moderno */
-  border-radius: 8px; /* Bordes más redondeados */
+  color: #b22222; /* Rojo vibrante */
+  border: 2px solid #b22222; /* Bordes rojos */
+  border-radius: 8px; /* Bordes redondeados */
   font-size: 1rem; /* Tamaño de fuente consistente */
   font-weight: 500; /* Texto ligeramente más audaz */
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
 }
 
 .google-login-button:hover {
-  background-color: #1074ab;
-  color: #ffffff;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al hacer hover */
+  background-color: #b22222; /* Fondo rojo al hacer hover */
+  color: #ffffff; /* Texto blanco */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
   transform: translateY(-2px); /* Efecto de flotación */
 }

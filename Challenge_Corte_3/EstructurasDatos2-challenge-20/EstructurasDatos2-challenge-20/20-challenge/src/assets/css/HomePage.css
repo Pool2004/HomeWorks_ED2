@@ -5,7 +5,7 @@ html {
   height: 100%;
   overflow: hidden; /* Prevent scroll */
   font-family: 'Inter', Arial, sans-serif;
-  background-color: #eaf0f6; /* Fondo más moderno */
+  background-color: #121212; /* Fondo oscuro */
 }
 
 .home-container {
@@ -14,17 +14,17 @@ html {
   flex-direction: column; /* Flex para centrar verticalmente */
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #dcefff, #f0f4f8); /* Gradiente moderno */
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Gradiente oscuro moderno */
   padding: 20px;
   text-align: center;
 }
 
 .home-container h1 {
-  background-color: #ffffff;
+  background-color: #1e1e1e; /* Fondo oscuro */
   padding: 30px 40px; /* Más espaciamiento */
   border-radius: 12px; /* Bordes más redondeados */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-  color: #0a6cff; /* Color más vibrante */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
+  color: #00adb5; /* Color vibrante (cian) */
   font-size: 2rem; /* Aumentar la fuente */
   font-weight: 600;
   margin-bottom: 20px;
@@ -34,8 +34,8 @@ html {
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: bold;
-  color: white;
-  background-color: #0a6cff;
+  color: #121212; /* Texto oscuro */
+  background-color: #b51500; /* Botón cian */
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -43,6 +43,6 @@ html {
 }
 
 .home-container button:hover {
-  background-color: #0848b6; /* Color al pasar el mouse */
+  background-color: #ffb700; /* Color al pasar el mouse */
   transform: scale(1.05); /* Efecto de agrandado */
 }

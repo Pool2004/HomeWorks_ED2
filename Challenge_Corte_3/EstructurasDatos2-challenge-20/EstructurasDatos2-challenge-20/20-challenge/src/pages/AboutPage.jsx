@@ -4,7 +4,7 @@ import '../assets/css/AboutPage.css';
 const AboutPage = () => {
   return (
     <div className="about-container">
-      <h1>About Page</h1>
+      <h1>Acerca de Nosotros :)</h1>
     </div>
   );
 };

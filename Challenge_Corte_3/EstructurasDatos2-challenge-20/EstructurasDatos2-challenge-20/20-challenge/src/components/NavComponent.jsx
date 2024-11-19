@@ -19,15 +19,13 @@ const NavComponent = () => {
   return (
     <nav className="nav-bar">
       <Link to="/" className="nav-logo">
-        <img src={logo} alt="logo" className="logo" />
-        <p className="textLogo">React JS</p>
       </Link>
       <div className="nav-links">
         <Link to="/" className="nav-link">
-          Home
+          Principal
         </Link>
         <Link to="/about" className="nav-link">
-          About
+          Acerca de
         </Link>
         {user ? (
           <>
@@ -35,12 +33,12 @@ const NavComponent = () => {
               Dashboard
             </Link>
             <button onClick={handleLogout} className="nav-link2 logout-button">
-              Logout
+              Cerrar Sesión
             </button>
           </>
         ) : (
           <Link to="/login" className="nav-link">
-            Login
+            Inicio Sesión
           </Link>
         )}
       </div>
